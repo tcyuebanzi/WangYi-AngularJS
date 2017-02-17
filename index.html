@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/index.css" rel="stylesheet">
+    <script src="js/lib/angular.js"></script>
+    <script src="js/controllers/controller.js"></script>
+    <script src="js/controllers/productList.js"></script>
+    <script src="js/filters/customFilter.js"></script>
+</head>
+<body ng-controller="myCtrl">
+
+<div class="wrap" ng-controller="productCtrl">
+    <h1>国人诗性未死---八月长安夜正长，我与周公道秋凉。</h1>
+<div class="nav clear" >
+    <a href="javascript:;" class="comment" ng-click="showCommet()">快速发帖</a>
+    <a href="javascript:;" class="look">去跟帖广场看看<span>></span></a>
+    <div class="right" >
+        <a href="javascript:;" class="lastpage" ng-click="upPage()">上一页</a>
+
+        <a href="javascript:;" class="page" ng-click="selectPage(number)"
+           ng-repeat="number in product | pageNavFilter:pageSize"
+           ng-class="number==pageNum?'now':''"
+          >{{number}}</a>
+
+        <a href="javascript:;" class="nextpage" ng-click="downPage()">下一页</a>
+    </div>
+</div>
+
+    <div class="publish_commet" ng-hide="menuState.show">
+        <span></span>
+        <textarea placeholder="抵制低俗，文明上网" ng-model="post"></textarea>
+
+        <div class="userinfo">
+            <input type="name" placeholder="如：example@163.com" class="login" ng-model="name">
+
+            <input type="password" placeholder="密码" class="login" ng-model="passwd">
+            <div class="is_login">
+                <label><input type="checkbox" class="autologin">自动登录</label>
+                <a href="javascript:;" class="login_user" ng-click="pushPost()">登录并发表</a>
+            </div>
+        </div>
+    </div>
+
+<div class="title clear">
+    <h2>热门跟帖<span>（跟贴<i>3532</i>条 有<i>110127</i>人参与）</span></h2>
+    <div class="ad">
+        <a href="javascript:;">跟贴用户自律公约</a>
+        <span>|</span>
+        <a href="javascript:;"> 手机也能看跟贴>></a>
+    </div>
+
+</div>
+<div class="main clear" >
+    <div class="box clear" ng-repeat="item in product | pagerFilter:pageNum:pageSize">
+        <div class="content">
+            <div class="pic">
+                <span><a href="javascript:;"><img ng-src="{{item.img}}"></a></span>
+            </div>
+            <div class="content_right">
+                <div class="top">
+                    <p class="name"><a href="javascript:;">{{item.name}}</a> <span>[{{item.city}}]</span></p>
+                    <time>{{item.date | date :"yyyy-MM-dd" +" "+ "HH:mm:ss"}}</time>
+                </div>
+                <div class="text">
+                    {{item.text}}
+                </div>
+            </div>
+        </div>
+        <ul>
+            <li ><a href="javascript:;" class="praise" ng-click="praise($index)">顶<span>[{{item.assist+item.zan}}]</span></a></li>
+            <li><a href="javascript:;" class="tread" ng-click="tread($index)">踩<span>[{{item.noassist+item.cai}}]</span></a></li>
+            <li><a href="javascript:;">回复</a> </li>
+            <li><a href="javascript:;">收藏</a> </li>
+            <li><a href="javascript:;">分享</a> </li>
+            <li><a href="javascript:;">复制</a> </li>
+        </ul>
+    </div>
+    <div class="lastnav clear">
+        <a href="javascript:;" class="lastpage" ng-click="upPage()">上一页</a>
+        <a href="javascript:;" class="page"  ng-repeat="number in product | pageNavFilter:pageSize"
+           ng-click="selectPage(number)"
+           ng-class="number==pageNum?'now':''" >{{number}}</a>
+        <a href="javascript:;" class="nextpage" ng-click="downPage()">下一页</a>
+    </div>
+    <!--底部跟帖框-->
+</div>
+
+    <h3>文明社会，从理性发贴开始。谢绝地域攻击。</h3>
+    <div class="publish_commet clear" >
+        <textarea placeholder="抵制低俗，文明上网" ng-model="posto"></textarea>
+
+        <div class="userinfo">
+            <input type="name" placeholder="如：example@163.com" class="login" ng-model="nameo">
+
+            <input type="password" placeholder="密码" class="login" ng-model="passwdo">
+            <div class="is_login">
+                <label><input type="checkbox" class="autologin">自动登录</label>
+                <a href="javascript:;" class="login_user" ng-click="pushPosto()">登录并发表</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

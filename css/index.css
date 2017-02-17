@@ -1,0 +1,68 @@
+*{padding: 0;margin: 0;}
+.clear:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.wrap{width: 700px;border: 1px solid #c4d6ec;margin: 100px auto;background: #f8fcff;}
+a{text-decoration: none;}
+input{border: none;}
+ul{list-style: none}
+h1{font-size: 26px;text-align: center;line-height: 65px;height: 65px;border-bottom: 1px solid #ccc;color: #1f3a87}
+.nav{padding: 12px 21px 7px 20px; }
+.nav a{text-align: center;display: block}
+.comment{float: left;width: 78px;height: 23px;color: #ffffff;background: #4c8ac7;border: 1px solid #21599b;line-height: 23px;
+    font-size: 14px;font-family: "宋体";font-weight: bolder;box-shadow: 0 15px 12px 0 rgba(255,255,255,.3) inset;}
+.comment:hover{background: #82bde7;}
+.look{ float: left;width: 108px;height: 24px;line-height: 24px;color: #000;font-size: 12px;border: 1px solid #bec6d0;
+    margin-left: 8px;font-family: "宋体";box-shadow: 0 -8px 5px 0 rgba(0,0,0,.1) inset;}
+.look:hover{box-shadow: 0 0px 0px 0 rgba(0,0,0,0) inset;}
+.look span{font-family:consolas;font-size: 16px;color: #666;line-height: 23px;}
+.nav .right{float: right;}
+.lastpage{float: left;border: 1px solid #ccc;width: 60px;height: 18px;font-size: 12px;color: #1f3a87;margin-left: 7px;line-height: 18px;}
+.nextpage{float: left;border: 1px solid #ccc;width: 60px;height: 18px;font-size: 12px;color: #1f3a87;margin-left: 7px;line-height: 18px;}
+.page{float: left;border: 1px solid #ccc;height: 18px;font-size: 12px;color: #1f3a87;padding: 0 5px;margin-left: 7px;line-height: 18px;}
+.title{padding: 0 20px;background: #e5eef8;border-top:  1px solid #c4d6ec;}
+.nav .right a:hover{background: #1f3a87;color: #fff;}
+.title h2{font-size: 16px;font-family: "微软雅黑";line-height: 36px;float: left;}
+.title h2 span{font-size: 12px;font-family: "宋体";font-weight: normal}
+.title h2 span i{font-size: 12px;font-family: "宋体";font-style: normal;color: #bc3040;font-weight: bolder}
+.title .ad{float: right;}
+.title .ad span{font-size: 12px;color: #666;}
+.title .ad a{font-size: 12px;font-family: "宋体";line-height: 36px;color: #1e50a2;}
+.title .ad a:hover{text-decoration: underline;color: #ba2636;}
+.main{padding-bottom: 10px;}
+.main .box{padding: 16px 0 18px 0;margin: 0 20px;border-bottom: 1px dotted #666;}
+.main .content .pic{float: left;}
+.main .content .pic span{border-radius: 50% ;overflow: hidden;display: block}
+.main .content .pic img{width: 40px;border-radius: 50% ;}
+.main .content .content_right{padding-left: 50px;}
+.main .content .top {overflow: hidden}
+.main .content .top .name{line-height: 18px;font-size: 14px;color: #1e50a2;float: left}
+.main .content .top .name a{color: #1e50a2;}
+.main .content .top .name a:hover{text-decoration: underline;color: #ba2626;}
+.main .content .top .name span{color:#666;}
+.main .content .top time{float: right;line-height: 18px;font-size: 14px;color: #666;}
+.main .content .text{padding: 12px 0 17px 0 ;}
+.main .box ul{float: right}
+.main .box ul li{float: left;font-size: 12px;margin-left: 16px;}
+.main .box ul li a{color: #1e50a2;}
+.main .box ul li a:hover{text-decoration: underline;color: #ba2636;}
+.main .box ul li .praise span{color: #ba2636;}
+.main .box ul li .tread span{color: #008800;}
+.main .box ul li .tread:hover{color: #008800;}
+.main .lastnav{float: right;margin: 10px 20px 12px 0;text-align: center;}
+.main .lastnav a:hover{background: #1f3a87;color: #fff;}
+.publish_commet {margin: 0 23px 22px 21px;border: 1px solid #c4d6ec;position: relative;}
+.publish_commet textarea{width: 653px;height: 105px;font-size: 16px;border:none;box-shadow: 0 1px 2px 0 rgba(0,0,0,.1) inset;
+    background: url("../images/textbg.png") no-repeat center ;}
+.publish_commet  span{display: block;width: 16px;height: 11px;background: #fff url("../images/icon.png") no-repeat -91px -83px;
+    position: absolute;top: -9px;left: 32px;}
+.publish_commet .login{width: 130px;height: 26px;border: 1px solid #c4d6ec;margin: 0 0px 0 6px; }
+.publish_commet .userinfo{background: #f1f7fc;padding: 10px 0 8px 0;border-top: 1px solid #c4d6ec; }
+.publish_commet .userinfo label{font-size: 12px;line-height: 26px;}
+.publish_commet .userinfo label .autologin{vertical-align: middle;}
+.publish_commet .userinfo .is_login{float: right;}
+.publish_commet .userinfo .login_user{font-size: 12px;background: #b6cad9;width: 78px;height: 23px;text-align: center;
+    display: block;float: right;color: #000;line-height: 23px;border: 1px solid #9eb4c5;margin: 0 6px 0 15px;
+    box-shadow: 0 8px 10px 0 rgba(255,255,255,.8) inset;}
+.publish_commet .userinfo .login_user:hover{background: #accde4}
+.now{background: #1f3a87;color: #fff;}
+h3{margin: 0 20px 20px 20px;background: #f1f4f7;text-align: center;font-size: 16px;color: #666;font-family: "宋体";line-height: 30px;}
+
